@@ -244,17 +244,17 @@ const koaValidator = ({
       return _obj;
     }
 
-    locations.forEach(location => {
-      ctx[`check${_.capitalize(location)}`] = (param, failMsg) => {
-        if (_.isPlainObject(param)) {
-          return validateSchema(param, ctx, location, options);
-        }
+    // locations.forEach(location => {
+    //   ctx[`check${_.capitalize(location)}`] = (param, failMsg) => {
+    //     if (_.isPlainObject(param)) {
+    //       return validateSchema(param, ctx, location, options);
+    //     }
+    //
+    //     return new ValidatorChain(param, failMsg, ctx, location, options);
+    //   };
+    // });
 
-        return new ValidatorChain(param, failMsg, ctx, location, options);
-      };
-    });
-
-    ctx.check = (param, failMsg) => {
+    ctx.verify = (param, failMsg) => {
       if (_.isPlainObject(param)) {
         return validateSchema(param, ctx, 'any', options);
       }

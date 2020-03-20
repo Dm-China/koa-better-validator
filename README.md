@@ -43,7 +43,7 @@ app.use(koaValidator({
 app.use(async (ctx, next) => {
   // The method check will automatically identify from body、params、query、header
   // ctx.query, ctx.params, ctx.request.body(if you have used a library like koa-bodyparser), headers
-  ctx.check('name', 'the name length should be between 6 and 10 ').isLength({min: 6, max: 10})
+  ctx.verify('name', 'the name length should be between 6 and 10 ').isLength({min: 6, max: 10})
   const { name } = await ctx.valid()
   console.log(name)
   await next()

@@ -1,0 +1,26 @@
+{
+  "name": "koa-better-validator",
+  "version": "1.0.9",
+  "description": "a koa validator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "keywords": [
+    "koa",
+    "koa2",
+    "validator",
+    "better",
+    "XSS"
+  ],
+  "homepage": "https://github.com/Dm-China/koa-better-validator.git",
+  "author": "DMHB",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "validator": "^12.2.0"
+  }
+}
